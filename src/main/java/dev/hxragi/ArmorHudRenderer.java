@@ -124,7 +124,7 @@ public class ArmorHudRenderer {
         graphics.renderItem(stack, slotX + ITEM_INSET_X, slotY + ITEM_INSET_Y);
         graphics.renderItemDecorations(font, stack, slotX + ITEM_INSET_X, slotY + ITEM_INSET_Y);
 
-        if (stack.isDamageableItem()) {
+        if (stack.isDamageableItem() && stack.isDamaged()) {
             int max = stack.getMaxDamage();
             int current = max - stack.getDamageValue();
             String text = String.valueOf(current);
